@@ -23,6 +23,8 @@ export default class extends React.Component {
   render() { 
     const { movieDetail } = this.state; 
     
+
+    
     return ( 
     <div> 
       <h3>영화 상세 페이지</h3> 
@@ -34,18 +36,19 @@ export default class extends React.Component {
       posterUrl={movieDetail.posterUrl} 
       advanceRate={movieDetail.advanceRate} 
       advanceRateRank={movieDetail.advanceRateRank} 
+      plot = {movieDetail.plot}
       />} 
       </div> 
       ); 
     } 
   } 
-  const MovieItem = ({ title, posterUrl, advanceRate, advanceRateRank }) => { 
+  const MovieItem = ({ title, posterUrl, advanceRate, advanceRateRank, plot }) => { 
     return (
       <div>
       <h3>{title}</h3>
       <img width="300" src={posterUrl}/>
+      <div>줄거리 : {plot}</div> 
       <div>예매율: {advanceRate}</div> 
-      <div>예매율 순위 : {advanceRateRank}</div> 
       </div> 
     ); 
   };

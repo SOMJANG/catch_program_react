@@ -1,0 +1,22 @@
+/* 영화 아이템에 대한 CSS */
+.movie_item {
+    line-height: 1.4;
+    padding: 10px;
+}
+
+.movie_poster {
+    width: 150px;
+    padding-bottom: 10px;
+}
+
+.movie_title {
+    font-size: 21px;
+    font-weight: bold;
+    color: steelblue;
+    padding-bottom:10px;
+}
+
+.movie_list {
+    display: flex;
+    flex-wrap: wrap;
+}

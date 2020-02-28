@@ -42,7 +42,7 @@ export default class extends React.Component {
           advanceRate={30.2}
           advanceRateRank={4}
         /> */}
-
+        <div className="movie_list">
         {movieList
             ? movieList.map(movie => (
                 <MovieItem
@@ -54,6 +54,7 @@ export default class extends React.Component {
                 />
         ))
         : null}
+        </div>
       </div>
     );
   }
@@ -64,12 +65,12 @@ const MovieItem = ({ title, posterUrl, advanceRate, advanceRateRank, id }) => {
 
   return (
 
-    <div>
+    <div className="movie_item">
       {/* <div>포스터 url: {posterUrl}</div> */}
-      <a href={url}><h3>{title}</h3></a>
-      <a href={url}><img width="150" src={posterUrl}/></a>
-      <div>예매율: {advanceRate}</div>
-      <div>예매율 순위 : {advanceRateRank}</div>
+      <a href={url}><h3 className="movie_title">{title}</h3></a>
+      <a href={url}><img className="movie_poster" width="150" src={posterUrl}/></a>
+      <div className="movie_rate">예매율: {advanceRate}</div>
+      <div className="movie_rank">예매율 순위 : {advanceRateRank}</div>
     </div>
   );
 };
