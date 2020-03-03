@@ -1,5 +1,8 @@
 import React from "react"; 
 import superagent from "superagent"; 
+
+var moment = require("moment");
+
 export default class extends React.Component { 
   state = { movieDetail: [] }; 
   
@@ -22,6 +25,10 @@ export default class extends React.Component {
     if (movieDetail.screeningStatus === "ready"){
         movieDetail.screeningStatus = "상영 예정";
     }
+
+    movieDetail.released = moment(movieDetail.released).format("YYYY-MM-DD")
+    
+    // string date_time = DateTime.Now.ToString("yyyy-MM-dd");
     
     //TODO: 2. 브라우저에 임시로 저장하기 (state) 
     // this.setState({ // ... // }) 
@@ -33,7 +40,7 @@ export default class extends React.Component {
   }; 
   
   render() { 
-    const { movieDetail } = this.state; 
+    const { movieDetail } = this.state;    
     
     
     return ( 
@@ -74,7 +81,7 @@ export default class extends React.Component {
           <h3>개봉일: {released}</h3>
           <h3>감독 : {director}</h3>
           {/* <h3>배우 : {casts}</h3> */}
-          <h3>배우 : {casts? casts.map(cast => <span>{cast}    </span>):null}</h3>
+          <h3>배우 : {casts? casts.map(cast => <span className="span_class">{cast}    </span>):null}</h3>
           <h3>장르 : {genres}</h3>
           <h3>상영 여부 : {screenStatus}</h3>
           <h3>상영시간 : {runtime}</h3>
