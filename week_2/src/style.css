@@ -20,3 +20,49 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.detail_page {
+    width : 1000px;
+    /* border: 1px solid #FFBBff; */
+    padding: 10px;
+    /* position: absolute; */
+    top: 10px;
+    left: 50%;
+    /* margin-left: -533px; */
+    margin : auto;
+    overflow: hidden;
+    display: flex;
+    padding-top: 20px;
+    
+}
+
+.detail_info {
+    /* border: 1px solid #FFBBff; */
+    width: 400px;
+    float: left;
+    padding: 10px;
+}
+
+.posterImg {
+    /* border: 1px solid #FFBBff; */
+    width: 700px;
+    float: left;
+    /* padding: 10px; */
+    margin-left: 10px;
+    text-align: right;
+    padding-top: 10px;
+}
+
+.postImg {
+    width: 380px;
+}
+
+body {
+    background-color: #36454f;
+    color:#ffffff;
+}
+
+.plot_div {
+    width: 1000px;
+    line-height: 200%;
+}
